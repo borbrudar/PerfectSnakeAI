@@ -6,10 +6,8 @@ using namespace sf;
 
 class Snake {
 public:
-	Snake(int size) : size(size) {
-		body[0].pos = { 15, 15 };
-		body[1].pos = { 16, 15 };
-		body[2].pos = { 17, 15 };
+	Snake(int size, int bx) : size(size) {
+		startP = Vector2f(bx / 2, bx / 2);
 	};
 	struct segment {
 		segment() {
@@ -23,9 +21,10 @@ public:
 		int speedx = 1, speedy = 0;
 		int size = 20;
 	};
-	bool update(Vector2f appPos);
+	bool update(Vector2f appPos, std::vector<std::vector<int>> board, int bx);
 	void draw(RenderWindow &window);
 	int size;
-	std::vector<segment> body{ 3 };
-	int length = 0;
+	std::vector<segment> body{ 1 };
+	int length = 0, curr, prev;
+	Vector2f startP;
 };

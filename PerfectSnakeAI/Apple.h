@@ -9,8 +9,8 @@ public:
 		apple.setFillColor(Color::Red);
 		apple.setOutlineThickness(2.f);
 		apple.setOutlineColor(Color::White);
-		pos.x = rand() % 21;
-		pos.y = rand() % 21;
+		pos.x = rand() % 6;
+		pos.y = rand() % 6;
 	}
 	void update(bool eaten);
 	void draw(RenderWindow &window);
