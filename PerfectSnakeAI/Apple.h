@@ -4,17 +4,17 @@
 using namespace sf;
 class Apple {
 public:
-	Apple(int size) : size(size) {
+	Apple(int size, int bx) : size(size), bx(bx) {
 		apple.setSize(Vector2f(size - 2, size - 2));
 		apple.setFillColor(Color::Red);
 		apple.setOutlineThickness(2.f);
 		apple.setOutlineColor(Color::White);
-		pos.x = rand() % 6;
-		pos.y = rand() % 6;
+		pos.x = rand() % bx;
+		pos.y = rand() % bx;
 	}
 	void update(bool eaten);
 	void draw(RenderWindow &window);
 	RectangleShape apple;
-	int size;
+	int size, bx;
 	Vector2f pos;
 };

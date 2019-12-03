@@ -3,8 +3,8 @@
 void Apple::update(bool eaten)
 {
 	if (eaten) {
-		pos.x = rand() % 6;
-		pos.y = rand() % 6;
+		pos.x = rand() % bx;
+		pos.y = rand() % bx;
 	}
 }
 

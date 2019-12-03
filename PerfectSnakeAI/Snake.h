@@ -27,4 +27,5 @@ public:
 	std::vector<segment> body{ 1 };
 	int length = 0, curr, prev;
 	Vector2f startP;
+	
 };
